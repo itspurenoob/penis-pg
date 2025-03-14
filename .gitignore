@@ -1,0 +1,41 @@
+# Ignore build directories
+x64/
+penis-rs/target/
+penis-rs/release/
+
+# Ignore Visual Studio stuff
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.cache
+*.pdb
+*.obj
+*.ipch
+*.tlog
+*.log
+*.ilk
+*.idb
+*.ncb
+*.sdf
+*.sln
+
+# Ignore Rust stuff
+Cargo.lock
+**/target/
+**/debug/
+**/release/
+**/*.rlib
+
+# Ignore compiled binaries
+*.exe
+*.dll
+*.lib
+*.a
+*.so
+*.o
+
+# Ignore environment files
+.vscode/
+.idea/
+*.env

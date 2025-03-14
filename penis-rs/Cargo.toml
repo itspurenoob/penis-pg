@@ -1,0 +1,11 @@
+[package]
+name = "penis-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+[lib]
+crate-type = ["cdylib"]
+[build-dependencies]
+cbindgen = "0.24"
+
