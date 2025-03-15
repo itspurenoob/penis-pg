@@ -1,6 +1,8 @@
 use rand::seq::SliceRandom;
 use rand::thread_rng;
 use rand::Rng;
+use rand::prelude::IndexedRandom;
+use rand::prelude::IndexedMutRandom;
 
 /// 🎵 **THE LAWS OF SUFFERING** 🎵
 /// Everything is meaningless. 
