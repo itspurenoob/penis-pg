@@ -20,7 +20,6 @@ By contributing to this **masterpiece of agony,** you agree to follow these **sa
         
         rust
         
-        CopyEdit
         
         `// This should never work, but it does. Why?` 
         
@@ -64,7 +63,6 @@ By contributing to this **masterpiece of agony,** you agree to follow these **sa
         
         rust
         
-        CopyEdit
         
         `/// This function seeks the truth in an endless void.  fn  add_numbers(a: i32, b: i32) ->  i32 {
             a + b
@@ -82,7 +80,6 @@ By contributing to this **masterpiece of agony,** you agree to follow these **sa
         
         rust
         
-        CopyEdit
         
         `eprintln!("The void has whispered back. It does not approve.");` 
         
