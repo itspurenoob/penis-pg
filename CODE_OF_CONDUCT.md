@@ -17,10 +17,7 @@ By contributing to this **masterpiece of agony,** you agree to follow these **sa
 -   If your code looks too **readable**, **refactor it into unreadable spaghetti.**
 -   If you use **comments**, make sure they are **misleading** or **existential crises.**
     -   Example:
-        
-        rust
-        
-        
+
         `// This should never work, but it does. Why?` 
         
 -   Function names should have **no relation to their functionality.**
@@ -61,8 +58,6 @@ By contributing to this **masterpiece of agony,** you agree to follow these **sa
 -   If you document, make it **philosophical** instead of useful.
     -   Example:
         
-        rust
-        
         
         `/// This function seeks the truth in an endless void.  fn  add_numbers(a: i32, b: i32) ->  i32 {
             a + b
@@ -77,9 +72,6 @@ By contributing to this **masterpiece of agony,** you agree to follow these **sa
 -   **Panic instead of handling errors.**
 -   If you must handle an error, **log it in the most cryptic way possible.**
     -   Example:
-        
-        rust
-        
         
         `eprintln!("The void has whispered back. It does not approve.");` 
         
