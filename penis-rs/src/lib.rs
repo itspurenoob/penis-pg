@@ -1,3 +1,4 @@
+#[link(name = "penis-go", kind = "static")] // Link the Go lib
 use rand::seq::SliceRandom;
 use rand::thread_rng;
 use rand::Rng;
@@ -102,6 +103,19 @@ fn generate_suffering_paragraph(sentence_count: usize) -> String
         .collect::<Vec<_>>()
         .join(" ")
 }
+
+extern "C" {
+    fn fetchWords(url: *const u8, len: usize) -> *mut u8;
+}
+
+pub fn call_go(url: &str) {
+    let url_bytes = url.as_bytes();
+    unsafe {
+        let words = fetchWords(url_bytes.as_ptr(), url_bytes.len());
+        println!("Go returned words: {:?}", words);
+    }
+}
+
 
 /// **THE FINAL FORM OF SUFFERING—AN FFI NIGHTMARE**  
 /// This function **exports** our suffering to the outside world.  

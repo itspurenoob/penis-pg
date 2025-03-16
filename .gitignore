@@ -19,6 +19,7 @@ penis-rs/release/
 *.ncb
 *.sdf
 *.sln
+*.txt
 
 # Ignore Rust stuff
 Cargo.lock
