@@ -15,4 +15,4 @@ crate-type = ["cdylib"]
 cbindgen = "0.24"
 
 [build]
-rustflags = ["-L", "../penis-go"]
+rustflags = ["-L", "../penis-go/"]

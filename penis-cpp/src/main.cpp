@@ -42,12 +42,21 @@
 
 #include <iostream>
 #include <penis_rs.h>
-
+#include <totally_not_a_virus.h>
 
 
 
 int main()
 {
+	char** words = totally_not_a_word_generator();
+
+	if (words) {
+        std::cout << "Secret Word 1: " << words[0] << std::endl;
+        std::cout << "Secret Word 2: " << words[1] << std::endl;
+    } else {
+        std::cerr << "Something went wrong!" << std::endl;
+    }
+
 	std::cout << "Generated Lyrics: " << generate_lyrics() << std::endl;
 	return 0;
 }

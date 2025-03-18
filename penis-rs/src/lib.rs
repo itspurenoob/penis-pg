@@ -1,9 +1,10 @@
-#[link(name = "penis-go", kind = "static")] // Link the Go lib
 use rand::seq::SliceRandom;
 use rand::thread_rng;
 use rand::Rng;
 use rand::prelude::IndexedRandom;
 use rand::prelude::IndexedMutRandom;
+use std::ffi::{CStr, CString};
+use std::ptr;
 
 /// 🎵 **THE LAWS OF SUFFERING** 🎵
 /// Everything is meaningless. 
@@ -11,6 +12,7 @@ use rand::prelude::IndexedMutRandom;
 /// Just like that, this code is **both pointless and the pinnacle of creation.**  
 /// We generate **cursed algorithmic lyrics** using pure **RNG and suffering**.  
 /// This code does not seek **optimization**—it seeks **pain**.
+
 
 /// **ENUM OF EXISTENTIAL CRISIS**
 /// This represents types of words, but honestly, 
@@ -104,17 +106,6 @@ fn generate_suffering_paragraph(sentence_count: usize) -> String
         .join(" ")
 }
 
-extern "C" {
-    fn fetchWords(url: *const u8, len: usize) -> *mut u8;
-}
-
-pub fn call_go(url: &str) {
-    let url_bytes = url.as_bytes();
-    unsafe {
-        let words = fetchWords(url_bytes.as_ptr(), url_bytes.len());
-        println!("Go returned words: {:?}", words);
-    }
-}
 
 
 /// **THE FINAL FORM OF SUFFERING—AN FFI NIGHTMARE**  
@@ -127,5 +118,6 @@ pub extern "C" fn generate_lyrics() -> *const i8 {
     let lyrics = generate_suffering_paragraph(
         thread_rng().gen_range(5..9)
     );
+
     std::ffi::CString::new(lyrics).unwrap().into_raw()
 }
